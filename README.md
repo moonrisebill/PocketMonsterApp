@@ -189,7 +189,7 @@ var currentPlatformVersion = ionic.Platform.version();
     <div id="google-map"></div>
 </div>
 ```
-* Using Ionic gestures with options from Angular Directives
+* Using Ionic gestures (Events) with options from Angular Directives
 ```javascript
 $ionicGesture.on('hold', function (e) {
   //Code...
@@ -198,6 +198,13 @@ $ionicGesture.on('hold', function (e) {
 * Ionic trigger **[events](http://ionicframework.com/docs/api/utility/ionic.EventController/)**
 ```javascript
 ionic.trigger("hold", { target: document.getElementsByClassName("item")[0] });
+```
+* Dom manipulation **[utilities](http://ionicframework.com/docs/api/utility/ionic.DomUtil/)**
+```javascript
+ionic.DomUtil.requestAnimationFrame(callback); //Calls requestAnimationFrame, or a polyfill if not available.
+ionic.DomUtil.getPositionInParent(element);    //Find an element’s scroll offset within its container.
+ionic.DomUtil.blurAll();                       //Blurs any currently focused input element.
+...
 ```
 * Execute when device is ready
 ```javascript
