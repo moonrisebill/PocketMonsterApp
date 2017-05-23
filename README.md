@@ -222,6 +222,11 @@ $ionicConfigProvider.scrolling.jsScrolling(false);
 ```javascript
 $ionicConfigProvider.views.maxCache(5);
 ```
+* Select the position of the tabs
+```javascript
+$ionicConfigProvider.tabs.position('top');
+$ionicConfigProvider.tabs.position('bottom');
+```
 * Center align the title in the navBar:
 ```javascript
 $ionicConfigProvider.navBar.alignTitle('center');
@@ -234,7 +239,7 @@ $ionicConfigProvider.views.swipeBackEnabled(false);
 ```javascript
 $ionicConfigProvider.backButton.previousTitleText(false).text('');
 ```
-* Change Ionic gestures options:
+* Change global Ionic gestures options:
 ```javascript
 ionic.Gestures.gestures.Hold.defaults.hold_threshold = 20;
 ```
