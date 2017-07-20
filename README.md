@@ -346,7 +346,7 @@ Command/Shortcut        | Action
 
 ![Your code is mine!](https://github.com/jdnichollsc/Ionic-Starter-Template/blob/gh-pages/images/obfuscate.png?raw=true)
 
-## Supporting
+# Supporting
 I believe in Unicorns 🦄
 Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
 
