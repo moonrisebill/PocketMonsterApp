@@ -26,6 +26,7 @@ Do you want to see this starter in action? Visit https://jdnichollsc.github.io/I
 
 # Projects using this template
 - **[Hartford Fashion Week](https://play.google.com/store/apps/details?id=fashion.hartford.app) - Created by [Matthew Seremet](http://matthewseremet.com/)**
+- **[PokéDex GO - Community](https://github.com/proyecto26/PokeDex-GO)
 - **[IonPhaser](http://market.ionic.io/plugins/ionphaser)**
 - **[Ionic ElastiChat](https://jdnichollsc.github.io/Ionic-ElastiChat-with-Images/)**
 - **[Ionic Drag and Drop](https://jdnichollsc.github.io/Ionic-Drag-and-Drop)**
