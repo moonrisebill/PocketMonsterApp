@@ -33,7 +33,7 @@ angular.module('App', ['ionic', 'ngCordova', 'ngAnimate'])
          '$compileProvider',
          function ($stateProvider, $urlRouterProvider, $ionicConfigProvider, $compileProvider) {
 
-    $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content|ms-appx|x-wmapp0):|data:image\/|img\//);
+    $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|cdvfile|blob|content|ms-appx|x-wmapp0):|data:image\/|img\//);
     $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|ghttps?|ms-appx|x-wmapp0):/);
     
     $ionicConfigProvider.scrolling.jsScrolling(ionic.Platform.isIOS());
