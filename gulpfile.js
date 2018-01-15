@@ -31,7 +31,7 @@ var paths = {
     destTemplates: './www/templates/'
 };
 
-gulp.task('serve:before', ['watch']);
+gulp.task('ionic:watch:before', ['watch'])
 
 gulp.task('default', ['sass', 'index', 'scripts', 'styles', 'templates', 'images', 'lib']);
 
@@ -216,3 +216,4 @@ gulp.task('deploy-files', function () {
 gulp.task('deploy', ['deploy-files'], function () {
     return gulp.src('').pipe(notify({ message: 'GitHub Page updated' }));
 });
+
