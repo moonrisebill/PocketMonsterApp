@@ -31,7 +31,7 @@ var paths = {
     destTemplates: './www/templates/'
 };
 
-gulp.task('ionic:watch:before', ['watch'])
+gulp.task('ionic:watch:before', ['watch']);
 
 gulp.task('default', ['sass', 'index', 'scripts', 'styles', 'templates', 'images', 'lib']);
 
