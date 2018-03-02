@@ -68,6 +68,10 @@
 			return deferred.promise;
 		};
 
+		self.executeSql = function (query, parameters) {
+			return $cordovaSQLite.execute(self.db(), query, parameters);
+		};
+
 		self.preloadDataBase = function (enableLog) {
 			var deferred = $q.defer();
 
@@ -93,10 +97,6 @@
 			}
 
 			return deferred.promise;
-		};
-
-		self.executeSql = function (query, parameters) {
-			return $cordovaSQLite.execute(self.db(), query, parameters);
 		};
 	}
 })();
