@@ -196,11 +196,11 @@ $ionicGesture.on('hold', function (e) {
   //Code...
 }, element, { hold_threshold: 20 });
 ```
-* Ionic trigger **[events](http://ionicframework.com/docs/api/utility/ionic.EventController/)**
+* Ionic trigger **[events](https://ionicframework.com/docs/v1/api/utility/ionic.EventController/)**
 ```javascript
 ionic.trigger("hold", { target: document.getElementsByClassName("item")[0] });
 ```
-* Dom manipulation **[utilities](http://ionicframework.com/docs/api/utility/ionic.DomUtil/)**
+* Dom manipulation **[utilities](https://ionicframework.com/docs/v1/api/utility/ionic.DomUtil/)**
 ```javascript
 ionic.DomUtil.requestAnimationFrame(callback); //Calls requestAnimationFrame, or a polyfill if not available.
 ionic.DomUtil.getPositionInParent(element);    //Find an element’s scroll offset within its container.
@@ -295,7 +295,7 @@ Command         | Action
 `ionic serve`   | Test on the browser
 `ionic serve --lab` | Test on the browser iOS and Android version 
 `ionic lib update`  | Update Ionic library files
-`ionic resources`   | Generate icons and splash screens. The images are located in `./resources/` directory. More info **[here](http://ionicframework.com/docs/cli/icon-splashscreen.html)**.
+`ionic resources`   | Generate icons and splash screens. The images are located in `./resources/` directory. More info **[here](http://ionicframework.com/docs/v1/cli/icon-splashscreen.html)**.
 `ionic resources --icon` | Generate only the icons. `icon.png`, `icon.psd` or `icon.ai` is located in `./resources/` directory
 `ionic resources --splash` | Generate only the splash screens. `splash.png`, `splash.psd` or `splash.ai` is located in `./resources/` directory
 `ionic resources ios --icon` | Generate icons per platform
