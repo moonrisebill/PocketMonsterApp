@@ -1,8 +1,8 @@
 {
   "name": "App",
   "app_id": "22a68333",
-  "v2": false,
   "typescript": false,
+  "type": "ionic1",
   "watch": {
     "watch" : "app/**/*",
     "livereload": [
