@@ -1,0 +1,105 @@
+@import "./range";
+@import "./range.ios.vars";
+
+// iOS Range
+// --------------------------------------------------
+
+:host {
+  --knob-border-radius: 50%;
+  --knob-background: #{$range-ios-knob-background-color};
+  --knob-box-shadow: #{$range-ios-knob-box-shadow};
+  --knob-size: #{$range-ios-knob-width};
+  --bar-height: #{$range-ios-bar-height};
+  --bar-background: #{$range-ios-bar-background-color};
+  --bar-background-active: #{ion-color(primary, base)};
+  --bar-border-radius: #{$range-ios-bar-border-radius};
+  --height: #{$range-ios-slider-height};
+}
+
+// TODO FW-2997 remove this
+:host(.legacy-range) {
+  @include padding($range-ios-padding-vertical, $range-ios-padding-horizontal);
+}
+
+:host(.ion-color) .range-bar-active,
+:host(.ion-color) .range-tick-active {
+  background: current-color(base);
+}
+
+::slotted([slot="start"]) {
+  @include margin(0, 16px, 0, 0);
+}
+
+::slotted([slot="end"]) {
+  @include margin(0, 0, 0, 16px);
+}
+
+:host(.range-has-pin) {
+  @include padding($range-ios-padding-vertical + $range-ios-pin-font-size, null, null, null);
+}
+
+.range-bar-active {
+  bottom: 0;
+
+  width: auto;
+
+  background: var(--bar-background-active);
+
+  &.has-ticks {
+    @include border-radius(0);
+    @include margin(null, calc(-1 * $range-ios-tick-width * 0.5), null, calc(-1 * $range-ios-tick-width * 0.5));
+  }
+}
+
+.range-tick {
+  @include margin-horizontal(-($range-ios-tick-width * 0.5), null);
+  @include border-radius($range-ios-tick-border-radius);
+
+  position: absolute;
+  top: ($range-ios-hit-height * 0.5) - ($range-ios-tick-height * 0.5);
+
+  width: $range-ios-tick-width;
+  height: $range-ios-tick-height;
+
+  background: $range-ios-tick-background-color;
+  pointer-events: none;
+}
+
+.range-tick-active {
+  background: var(--bar-background-active);
+}
+
+.range-pin {
+  @include transform(translate3d(0, 28px, 0), scale(.01));
+  @include padding($range-ios-pin-padding-top, $range-ios-pin-padding-end, $range-ios-pin-padding-bottom, $range-ios-pin-padding-start);
+
+  display: inline-block;
+  position: relative;
+  top: -20px;
+
+  min-width: 28px;
+
+  transition: transform 120ms ease;
+
+  background: $range-ios-pin-background-color;
+  color: $range-ios-pin-color;
+
+  font-size: $range-ios-pin-font-size;
+
+  text-align: center;
+}
+
+.range-knob-pressed .range-pin,
+.range-knob-handle.ion-focused .range-pin {
+  @include transform(translate3d(0, 0, 0), scale(1));
+}
+
+// iOS Range: Disabled
+// --------------------------------------------------
+// When the range is disabled, the entire range,
+// range label, any slotted labels, and any slotted
+// icons need to receive the same opacity.
+
+:host(.range-disabled) {
+  opacity: $range-ios-disabled-opacity;
+}
